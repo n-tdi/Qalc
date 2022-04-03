@@ -1,9 +1,9 @@
-package world.ntdi;
+package world.ntdi.mathutils;
 
-import world.ntdi.Commands.PhysicsCommands;
-import world.ntdi.Commands.QuadraticCommands;
-import world.ntdi.Commands.UtilCommands;
-import world.ntdi.Listener.ReadyListener;
+import world.ntdi.mathutils.Commands.PhysicsCommands;
+import world.ntdi.mathutils.Commands.QuadraticCommands;
+import world.ntdi.mathutils.Commands.UtilCommands;
+import world.ntdi.mathutils.Listener.ReadyListener;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.utils.cache.CacheFlag;

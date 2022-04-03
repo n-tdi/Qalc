@@ -1,4 +1,4 @@
-package world.ntdi.Api;
+package world.ntdi.mathutils.Api;
 
 public class ScienceMath {
     public static double getForce(double mass, double acceleration) {

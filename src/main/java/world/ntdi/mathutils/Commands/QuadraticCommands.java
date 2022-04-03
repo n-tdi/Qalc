@@ -1,11 +1,12 @@
-package world.ntdi.Commands;
+package world.ntdi.mathutils.Commands;
 
-import world.ntdi.Api.QuadraticMath;
+import world.ntdi.mathutils.Api.QuadraticMath;
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.MessageChannel;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.json.simple.parser.ParseException;
+import world.ntdi.mathutils.QuadraticMath;
 
 import java.io.IOException;
 

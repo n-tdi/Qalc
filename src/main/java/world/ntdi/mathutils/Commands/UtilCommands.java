@@ -1,4 +1,4 @@
-package world.ntdi.Commands;
+package world.ntdi.mathutils.Commands;
 
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.Message;

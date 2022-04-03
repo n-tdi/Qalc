@@ -1,4 +1,4 @@
-package world.ntdi.Listener;
+package world.ntdi.mathutils.Listener;
 
 import net.dv8tion.jda.api.events.GenericEvent;
 import net.dv8tion.jda.api.events.ReadyEvent;

@@ -1,4 +1,4 @@
-package world.ntdi;
+package world.ntdi.mathutils;
 
 import javax.security.auth.login.LoginException;
 

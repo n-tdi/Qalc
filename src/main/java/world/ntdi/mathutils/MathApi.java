@@ -1,4 +1,4 @@
-package world.ntdi.Api;
+package world.ntdi.mathutils.Api;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
