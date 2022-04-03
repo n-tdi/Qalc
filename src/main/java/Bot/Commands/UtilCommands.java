@@ -21,6 +21,7 @@ public class UtilCommands extends ListenerAdapter {
 
             help.setDescription("**!help** - Displays this message\n");
 
+            help.addField("**!findAll**", "!findAll a b expression", true);
             help.addField("**!findX**", "!findX a b", true);
             help.addField("**!findY**", "!findY x expression", true);
             help.addField("**!findPoints**", "!findPoints x expression", true);
