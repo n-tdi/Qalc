@@ -46,9 +46,7 @@ public class MathUtils {
             Scanner scanner1 = new Scanner(System.in);
             System.out.println("expression: ");
             String expression = scanner1.nextLine();
-            System.out.println(QuadraticMath.getPoint(x, expression));
-            System.out.println(QuadraticMath.getPoint(x+1, expression));
-            System.out.println(QuadraticMath.getPoint(x+2, expression));
+            System.out.println(QuadraticMath.getPoints5(x, expression));
         } else if (n == 5) {
             System.out.println("a: ");
             double a = scanner.nextDouble();
@@ -62,9 +60,7 @@ public class MathUtils {
             System.out.println("x: " + x);
             double y = QuadraticMath.getY(x, expression);
             System.out.println("y: " + y);
-            System.out.println(QuadraticMath.getPoint(x, expression));
-            System.out.println(QuadraticMath.getPoint(x+1, expression));
-            System.out.println(QuadraticMath.getPoint(x+2, expression));
+            System.out.println(QuadraticMath.getPoints5(x, expression));
 
         } else if (n == 6) {
             System.out.println("Mass (kg): ");

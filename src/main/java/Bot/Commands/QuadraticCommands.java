@@ -51,11 +51,9 @@ public class QuadraticCommands extends ListenerAdapter {
                     sb.append(args[i]).append(" ");
                 }
                 String expr = sb.toString();
-                reply(channel, "Here are 3 points (p.s. they mirror after the first one):");
+                reply(channel, "Here are 5 points (p.s. they mirror):");
                 try {
-                    reply(channel, QuadraticMath.getPoint(x, expr));
-                    reply(channel, QuadraticMath.getPoint(x+1, expr));
-                    reply(channel, QuadraticMath.getPoint(x+2, expr));
+                    reply(channel, QuadraticMath.getPoints5(x, expr));
                 } catch (IOException | ParseException e) {
                     e.printStackTrace();
                 }
