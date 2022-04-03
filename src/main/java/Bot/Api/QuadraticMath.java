@@ -14,7 +14,7 @@ public class QuadraticMath {
     }
 
     public static double getY(double x, String expr) throws IOException, ParseException {
-        String expression = expr.replaceAll("x", String.valueOf(x));
+        String expression = expr.replaceAll("x", "(" + x + ")");
         System.out.println(expression);
         return Double.parseDouble(MathApi.mathApiResult(expression));
     }
@@ -27,11 +27,11 @@ public class QuadraticMath {
         double num4 = x+1;
         double num5 = x+2;
 
-        String expression1 = expr.replaceAll("x", String.valueOf(num1));
-        String expression2 = expr.replaceAll("x", String.valueOf(num2));
-        String expression3 = expr.replaceAll("x", String.valueOf(num3));
-        String expression4 = expr.replaceAll("x", String.valueOf(num4));
-        String expression5 = expr.replaceAll("x", String.valueOf(num5));
+        String expression1 = expr.replaceAll("x", "(" + num1 + ")");
+        String expression2 = expr.replaceAll("x", "(" + num2 + ")");
+        String expression3 = expr.replaceAll("x", "(" + num3 + ")");
+        String expression4 = expr.replaceAll("x", "(" + num4 + ")");
+        String expression5 = expr.replaceAll("x", "(" + num5 + ")");
 
         sb.append("(").append(num1).append(", ").append(getY(num1, expression1)).append(")\n");
         sb.append("(").append(num2).append(", ").append(getY(num2, expression2)).append(")\n");
@@ -61,7 +61,7 @@ public class QuadraticMath {
     }
 
     public static String getAnswer(String expr) throws IOException, ParseException {
-        String expression = expr.replaceAll("x", String.valueOf(0));
+        String expression = expr.replaceAll("x", "(" + 0 + ")");
         return MathApi.mathApiResult(expression);
     }
 }
