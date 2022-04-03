@@ -108,7 +108,7 @@ public class QuadraticCommands extends ListenerAdapter {
                     reply(channel, "X: " + x);
                     reply(channel, "Y: " + y);
                     reply(channel, "The answer is: " + QuadraticMath.getAnswer(expr));
-                    reply(channel, "5 Points: " + QuadraticMath.getPoints5(x, expr));
+                    reply(channel, "5 Points: \n" + QuadraticMath.getPoints5(x, expr));
                     reply(channel, "Domain and range: " + QuadraticMath.getDomainAndRange(a, x));
                     reply(channel, "Minimum or maximum: " + QuadraticMath.minOrMax(a));
                 } catch (IOException | ParseException e) {
