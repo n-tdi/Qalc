@@ -1,9 +1,8 @@
-package Bot.Listener;
+package world.ntdi.Listener;
 
 import net.dv8tion.jda.api.events.GenericEvent;
 import net.dv8tion.jda.api.events.ReadyEvent;
 import net.dv8tion.jda.api.hooks.EventListener;
-import org.jetbrains.annotations.NotNull;
 
 public class ReadyListener implements EventListener {
     @Override

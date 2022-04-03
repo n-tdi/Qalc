@@ -1,4 +1,4 @@
-package Bot.Api;
+package world.ntdi.Api;
 
 import org.json.simple.parser.ParseException;
 

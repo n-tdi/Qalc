@@ -1,9 +1,9 @@
-package Bot;
+package world.ntdi;
 
-import Bot.Commands.PhysicsCommands;
-import Bot.Commands.QuadraticCommands;
-import Bot.Commands.UtilCommands;
-import Bot.Listener.ReadyListener;
+import world.ntdi.Commands.PhysicsCommands;
+import world.ntdi.Commands.QuadraticCommands;
+import world.ntdi.Commands.UtilCommands;
+import world.ntdi.Listener.ReadyListener;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.utils.cache.CacheFlag;
@@ -12,7 +12,7 @@ import javax.security.auth.login.LoginException;
 
 
 public class JDA {
-    public static void main(String[] args) throws LoginException, LoginException {
+    public static void main(String[] args) throws LoginException {
         JDABuilder builder = JDABuilder.createDefault("OTU5NjM5OTY3MDg3MzQ1Njc0.Yke0XQ.icdz9tiglcwfmbATxhnkcKUT8S8");
 
         builder.disableCache(CacheFlag.MEMBER_OVERRIDES, CacheFlag.VOICE_STATE);
@@ -24,7 +24,5 @@ public class JDA {
         builder.setActivity(Activity.watching("Math"));
 
         builder.build();
-
-
     }
 }

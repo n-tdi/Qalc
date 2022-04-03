@@ -1,4 +1,4 @@
-package Bot.Commands;
+package world.ntdi.Commands;
 
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.Message;

@@ -1,0 +1,9 @@
+world\ntdi\Api\ScienceMath.class
+world\ntdi\Listener\ReadyListener.class
+world\ntdi\Commands\PhysicsCommands.class
+world\ntdi\Commands\UtilCommands.class
+world\ntdi\Api\QuadraticMath.class
+world\ntdi\MathUtils.class
+world\ntdi\Api\MathApi.class
+world\ntdi\Commands\QuadraticCommands.class
+world\ntdi\JDA.class

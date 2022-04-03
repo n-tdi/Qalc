@@ -1,6 +1,6 @@
-package Bot.Commands;
+package world.ntdi.Commands;
 
-import Bot.Api.QuadraticMath;
+import world.ntdi.Api.QuadraticMath;
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.MessageChannel;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
