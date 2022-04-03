@@ -59,4 +59,9 @@ public class QuadraticMath {
         }
         return null;
     }
+
+    public static String getAnswer(String expr) throws IOException, ParseException {
+        String expression = expr.replaceAll("x", String.valueOf(0));
+        return MathApi.mathApiResult(expression);
+    }
 }

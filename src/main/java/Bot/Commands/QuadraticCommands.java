@@ -107,6 +107,7 @@ public class QuadraticCommands extends ListenerAdapter {
                     reply(channel, "Here is all the information you'll need:");
                     reply(channel, "X: " + x);
                     reply(channel, "Y: " + y);
+                    reply(channel, "The answer is: " + QuadraticMath.getAnswer(expr));
                     reply(channel, "5 Points: " + QuadraticMath.getPoints5(x, expr));
                     reply(channel, "Domain and range: " + QuadraticMath.getDomainAndRange(a, x));
                     reply(channel, "Minimum or maximum: " + QuadraticMath.minOrMax(a));
@@ -115,6 +116,21 @@ public class QuadraticCommands extends ListenerAdapter {
                 }
             } else {
                 reply(channel, "Please enter the values of a, b and expression - !findAll 1 2 x^2 + 2(x) + 1");
+            }
+        } else if (args[0].equalsIgnoreCase("!findAnswer")) {
+            if (args.length >= 2) {
+                StringBuilder sb = new StringBuilder();
+                for (int i = 1; i < args.length; i++) {
+                    sb.append(args[i]).append(" ");
+                }
+                String expr = sb.toString();
+                try {
+                    reply(channel, "The answer is: " + QuadraticMath.getAnswer(expr));
+                } catch (IOException | ParseException e) {
+                    e.printStackTrace();
+                }
+            } else {
+                reply(channel, "Please enter the expression - !findAnswer x^2 + 2(x) + 1");
             }
         }
     }
