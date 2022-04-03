@@ -24,6 +24,8 @@ public class UtilCommands extends ListenerAdapter {
             help.addField("**!findX**", "!findX a b", true);
             help.addField("**!findY**", "!findY x expression", true);
             help.addField("**!findPoints**", "!findPoints x expression", true);
+            help.addField("**!findMinOrMax**", "!findMinOrMax a", true);
+            help.addField("**!findDomainRange**", "!findDomainRange a x", true);
 
             help.addField("**!qalc**", "!qalc expression", false);
             help.setAuthor("Qalc Tdi", "https://discord.gg/VU7kWC9Nda", "https://cdn.discordapp.com/avatars/959639967087345674/4fb685544e5f9ce5363336edcf5d5e74.png?size=256");

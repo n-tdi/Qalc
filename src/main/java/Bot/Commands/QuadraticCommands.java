@@ -75,6 +75,21 @@ public class QuadraticCommands extends ListenerAdapter {
             } else {
                 reply(channel, "Please enter the values of x and expression - !qalc 1 + 1");
             }
+        } else if (args[0].equalsIgnoreCase("!findMinOrMax")) {
+            if (args.length == 2) {
+                double a = Double.parseDouble(args[1]);
+                reply(channel, "Your expression has a: " + QuadraticMath.minOrMax(a));
+            } else {
+                reply(channel, "Please enter the values of a - !minOrMax 1");
+            }
+        } else if (args[0].equalsIgnoreCase("!findDomainRange")) {
+            if (args.length == 3) {
+                double a = Double.parseDouble(args[1]);
+                double x = Double.parseDouble(args[2]);
+                reply(channel, "The domain and range are: " + QuadraticMath.getDomainAndRange(a, x));
+            } else {
+                reply(channel, "Please enter the values of a and x - !domainRange 1 2");
+            }
         }
     }
 

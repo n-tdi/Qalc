@@ -41,4 +41,22 @@ public class QuadraticMath {
 
         return sb.toString();
     }
+
+    public static String getDomainAndRange(double x, double a) {
+        if (a >= 0) {
+            return "Domain: (-∞, -∞)\nRange: (" + x + ", -∞)";
+        } else if (a < 0) {
+            return "Domain: (∞, ∞)\nRange: (" + x + ", ∞)";
+        }
+        return null;
+    }
+
+    public static String minOrMax(double a){
+        if (a >= 0) {
+            return "Maximum Point";
+        } else if (a < 0) {
+            return "Minimum Point";
+        }
+        return null;
+    }
 }
