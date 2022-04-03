@@ -41,7 +41,7 @@ public class QuadraticCommands extends ListenerAdapter {
                     e.printStackTrace();
                 }
             } else {
-                reply(channel, "Please enter the values of x and expression - !findY 2 x^2 + 2(x) + 1");
+                reply(channel, "Please enter the values of x and expression - !findY 2 x^2 + 2x + 1");
             }
         } else if (args[0].equalsIgnoreCase("!findPoints")) {
             if (args.length >= 3) {
@@ -58,7 +58,7 @@ public class QuadraticCommands extends ListenerAdapter {
                     e.printStackTrace();
                 }
             } else {
-                reply(channel, "Please enter the values of x and expression - !findPoints 2 x^2 + 2(x) + 1");
+                reply(channel, "Please enter the values of x and expression - !findPoints 2 x^2 + 2x + 1");
             }
         } else if (args[0].equalsIgnoreCase("!qalc")) {
             if (args.length >= 2) {
@@ -115,7 +115,7 @@ public class QuadraticCommands extends ListenerAdapter {
                     e.printStackTrace();
                 }
             } else {
-                reply(channel, "Please enter the values of a, b and expression - !findAll 1 2 x^2 + 2(x) + 1");
+                reply(channel, "Please enter the values of a, b and expression - !findAll 1 2 x^2 + 2x + 1");
             }
         } else if (args[0].equalsIgnoreCase("!findAnswer")) {
             if (args.length >= 2) {
@@ -130,7 +130,7 @@ public class QuadraticCommands extends ListenerAdapter {
                     e.printStackTrace();
                 }
             } else {
-                reply(channel, "Please enter the expression - !findAnswer x^2 + 2(x) + 1");
+                reply(channel, "Please enter the expression - !findAnswer x^2 + 2x + 1");
             }
         }
     }
