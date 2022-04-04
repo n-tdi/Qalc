@@ -62,6 +62,7 @@ public class UtilCommands extends ListenerAdapter {
     public EmbedBuilder quadraticHelp() {
         String a = "[a](https://d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/quadratic-equations-01-1620383155.png)";
         String b = "[b](https://d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/quadratic-equations-01-1620383155.png)";
+        String c = "[b](https://d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/quadratic-equations-01-1620383155.png)";
         String expr = "[expression](https://d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/expression-vs-equation-1618895944.png)";
         String x = "[x](https://d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/quadratic-equations-01-1620383155.png)";
         EmbedBuilder help = new EmbedBuilder();
@@ -77,6 +78,7 @@ public class UtilCommands extends ListenerAdapter {
         help.addField("**/findPoints**", "/findPoints " + x + " " + expr, true);
         help.addField("**/findMinOrMax**", "/findMinOrMax " + a, true);
         help.addField("**/findDomainRange**", "/findDomainRange " + a + " " + x, true);
+        help.addField("**/discriminant**", "/discriminant " + a + " " + b + " " + c, true);
 
         help.setFooter("Bot made by Ntdi", "https://i.imgur.com/VTc8AiA.jpeg");
         return help;
