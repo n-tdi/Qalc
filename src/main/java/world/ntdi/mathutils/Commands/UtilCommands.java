@@ -79,6 +79,7 @@ public class UtilCommands extends ListenerAdapter {
         help.addField("**/findMinOrMax**", "/findMinOrMax " + a, true);
         help.addField("**/findDomainRange**", "/findDomainRange " + a + " " + x, true);
         help.addField("**/discriminant**", "/discriminant " + a + " " + b + " " + c, true);
+        help.addField("**/quadform**", "/quadform " + a + " " + b + " " + c, true);
 
         help.setFooter("Bot made by Ntdi", "https://i.imgur.com/VTc8AiA.jpeg");
         return help;

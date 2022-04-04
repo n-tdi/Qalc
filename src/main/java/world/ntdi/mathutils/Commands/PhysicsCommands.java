@@ -4,7 +4,11 @@ import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.MessageChannel;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
+import org.json.simple.parser.ParseException;
+import world.ntdi.mathutils.Api.QuadraticMath;
 import world.ntdi.mathutils.Api.ScienceMath;
+
+import java.io.IOException;
 
 public class PhysicsCommands extends ListenerAdapter {
     @Override
@@ -62,6 +66,17 @@ public class PhysicsCommands extends ListenerAdapter {
                 double mass = Double.parseDouble(args[2]);
                 double velocity = Double.parseDouble(args[3]);
                 reply(channel, "Gravitational Potential Energy (J): " + ScienceMath.getGPE(height, mass, velocity));
+            }
+        } else if (args[0].equalsIgnoreCase("!quadform")) {
+            if (args.length == 4) {
+                double a = Double.parseDouble(args[1]);
+                double b = Double.parseDouble(args[2]);
+                double c = Double.parseDouble(args[3]);
+                try {
+                    reply(channel, "Quadratic Formula Answer: " + QuadraticMath.quadForm(a, b, c).toString());
+                } catch (IOException | ParseException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }

@@ -3,6 +3,8 @@ package world.ntdi.mathutils.Api;
 import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class QuadraticMath {
     public static double qalc(String expr) throws IOException, ParseException {
@@ -68,5 +70,14 @@ public class QuadraticMath {
     public static String getDiscriminant(double a, double b, double c) throws IOException, ParseException {
         String expression = "(" + b + ")^2 - 4(" + a + ")(" + c + ")";
         return MathApi.mathApiResult(expression);
+    }
+
+    public static List<Double> quadForm(double a, double b, double c) throws IOException, ParseException {
+        String expression1 = "(-" + b + " + sqrt(" + getDiscriminant(a, b, c) + ")) / 2(" + a + ")";
+        String expression2 = "(-" + b + " - sqrt(" + getDiscriminant(a, b, c) + ")) / 2(" + a + ")";
+        List<Double> list = new ArrayList<Double>();
+        list.add(Double.parseDouble(MathApi.mathApiResult(expression1)));
+        list.add(Double.parseDouble(MathApi.mathApiResult(expression2)));
+        return list;
     }
 }
