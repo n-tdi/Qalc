@@ -89,6 +89,12 @@ public class JDA {
                         .addOptions(new OptionData(OptionType.NUMBER, "b", "The b number").setRequired(true))
                         .addOptions(new OptionData(OptionType.NUMBER, "c", "The c number").setRequired(true))
         );
+        commands.addCommands(
+                Commands.slash("quadform", "Get the answers to a quadratic formula given a, b, and c")
+                        .addOptions(new OptionData(OptionType.NUMBER, "a", "The a number").setRequired(true))
+                        .addOptions(new OptionData(OptionType.NUMBER, "b", "The b number").setRequired(true))
+                        .addOptions(new OptionData(OptionType.NUMBER, "c", "The c number").setRequired(true))
+        );
         gCommands.addCommands(
                 Commands.slash("findx", "Finds the x cord with a given a and b")
                         .addOptions(new OptionData(OptionType.NUMBER, "a", "The a cord").setRequired(true))
@@ -133,6 +139,18 @@ public class JDA {
         gCommands.addCommands(
                 Commands.slash("qalc", "Qalculate a given expression")
                         .addOptions(new OptionData(OptionType.STRING, "expression", "The expression").setRequired(true))
+        );
+        gCommands.addCommands(
+                Commands.slash("discriminant", "Get the discriminant given a, b, and c")
+                        .addOptions(new OptionData(OptionType.NUMBER, "a", "The a number").setRequired(true))
+                        .addOptions(new OptionData(OptionType.NUMBER, "b", "The b number").setRequired(true))
+                        .addOptions(new OptionData(OptionType.NUMBER, "c", "The c number").setRequired(true))
+        );
+        gCommands.addCommands(
+                Commands.slash("quadform", "Get the answers to a quadratic formula given a, b, and c")
+                        .addOptions(new OptionData(OptionType.NUMBER, "a", "The a number").setRequired(true))
+                        .addOptions(new OptionData(OptionType.NUMBER, "b", "The b number").setRequired(true))
+                        .addOptions(new OptionData(OptionType.NUMBER, "c", "The c number").setRequired(true))
         );
         commands.queue();
         gCommands.queue();

@@ -9,6 +9,7 @@ import org.json.simple.parser.ParseException;
 import world.ntdi.mathutils.Api.QuadraticMath;
 
 import java.io.IOException;
+import java.util.List;
 
 public class QuadraticCommands extends ListenerAdapter {
     public void onSlashCommandInteraction(SlashCommandInteractionEvent event) {
@@ -82,7 +83,17 @@ public class QuadraticCommands extends ListenerAdapter {
             double b = event.getOption("b").getAsDouble();
             double c = event.getOption("c").getAsDouble();
             try {
-                event.reply("The discriminant is: " + QuadraticMath.getDiscriminant(a, b, c));
+                event.reply("The discriminant is: " + QuadraticMath.getDiscriminant(a, b, c)).queue();
+            } catch (IOException | ParseException e) {
+                e.printStackTrace();
+            }
+        } else if (event.getName().equals("quadform")) {
+            double a = event.getOption("a").getAsDouble();
+            double b = event.getOption("b").getAsDouble();
+            double c = event.getOption("c").getAsDouble();
+            try {
+                List<Double> quadFormAnswers = QuadraticMath.quadForm(a, b, c);
+                event.reply("Quadratic Formula Answer: \nx1 = " + quadFormAnswers.get(0) + "\nx2 = " + quadFormAnswers.get(1)).queue();
             } catch (IOException | ParseException e) {
                 e.printStackTrace();
             }
