@@ -21,4 +21,11 @@ public class ScienceMath {
     public static double getPower(double mass, double acceleration, double distance, double time) {
         return (mass * acceleration * distance) / time;
     }
+
+    public static double getKE(double mass, double velocity) {
+        return 0.5 * mass * Math.pow(velocity, 2);
+    }
+    public static double getGPE(double height, double mass, double velocity) {
+        return mass * velocity * height;
+    }
 }

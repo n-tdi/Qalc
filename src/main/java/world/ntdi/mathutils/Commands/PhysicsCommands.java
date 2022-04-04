@@ -50,6 +50,19 @@ public class PhysicsCommands extends ListenerAdapter {
                 double time = Double.parseDouble(args[4]);
                 reply(channel, "Power (W): " + ScienceMath.getPower(mass, acceleration, distance, time));
             }
+        } else if (args[0].equalsIgnoreCase("!ke")) {
+            if (args.length == 3) {
+                double mass = Double.parseDouble(args[1]);
+                double velocity = Double.parseDouble(args[2]);
+                reply(channel, "Kinetic Energy (J): " + ScienceMath.getKE(mass, velocity));
+            }
+        } else if (args[0].equalsIgnoreCase("!gpe")) {
+            if (args.length == 4) {
+                double height = Double.parseDouble(args[1]);
+                double mass = Double.parseDouble(args[2]);
+                double velocity = Double.parseDouble(args[3]);
+                reply(channel, "Gravitational Potential Energy (J): " + ScienceMath.getGPE(height, mass, velocity));
+            }
         }
     }
     public void reply(MessageChannel channel, String message) {
