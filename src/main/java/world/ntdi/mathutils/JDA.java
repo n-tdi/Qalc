@@ -88,6 +88,7 @@ public class JDA {
                         .addOptions(new OptionData(OptionType.NUMBER, "a", "The a number").setRequired(true))
                         .addOptions(new OptionData(OptionType.NUMBER, "b", "The b number").setRequired(true))
                         .addOptions(new OptionData(OptionType.NUMBER, "c", "The c number").setRequired(true))
+        );
         gCommands.addCommands(
                 Commands.slash("findx", "Finds the x cord with a given a and b")
                         .addOptions(new OptionData(OptionType.NUMBER, "a", "The a cord").setRequired(true))

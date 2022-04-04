@@ -65,8 +65,8 @@ public class QuadraticMath {
         return MathApi.mathApiResult(expression);
     }
     
-    public static String getDiscriminant(double a, double b, double c) {
-        String expression = "(" + b ")^2 - 4(" + a + ")(" + c + ")"
-        return Math.Api.mathApiResult(expression);
+    public static String getDiscriminant(double a, double b, double c) throws IOException, ParseException {
+        String expression = "(" + b + ")^2 - 4(" + a + ")(" + c + ")";
+        return MathApi.mathApiResult(expression);
     }
 }

@@ -77,13 +77,13 @@ public class QuadraticCommands extends ListenerAdapter {
             } catch (IOException | ParseException e) {
                 e.printStackTrace();
             }
-        } else if (event.getName().eqauls("discriminant")) {
+        } else if (event.getName().equals("discriminant")) {
             double a = event.getOption("a").getAsDouble();
             double b = event.getOption("b").getAsDouble();
             double c = event.getOption("c").getAsDouble();
             try {
                 event.reply("The discriminant is: " + QuadraticMath.getDiscriminant(a, b, c));
-            catch (IOException | ParseException e) {
+            } catch (IOException | ParseException e) {
                 e.printStackTrace();
             }
         }
