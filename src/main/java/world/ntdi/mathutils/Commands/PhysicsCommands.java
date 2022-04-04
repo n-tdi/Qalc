@@ -1,11 +1,10 @@
 package world.ntdi.mathutils.Commands;
 
-import world.ntdi.mathutils.Api.ScienceMath;
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.MessageChannel;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
-import world.ntdi.mathutils.ScienceMath;
+import world.ntdi.mathutils.Api.ScienceMath;
 
 public class PhysicsCommands extends ListenerAdapter {
     @Override

@@ -70,13 +70,13 @@ public class UtilCommands extends ListenerAdapter {
         help.setAuthor("Qalc Tdi", "https://discord.gg/VU7kWC9Nda", "https://cdn.discordapp.com/avatars/959639967087345674/4fb685544e5f9ce5363336edcf5d5e74.png?size=256");
         help.setDescription("Get all the **juicy** info of the quadratic commands here!");
 
-        help.addField("**!findAll**", "!findAll " + a + " " + b + " " + expr, true);
-        help.addField("**!findAnswer**", "!find " + expr, true);
-        help.addField("**!findX**", "!findX " + a + " " + b, true);
-        help.addField("**!findY**", "!findY " + x + " " + expr, true);
-        help.addField("**!findPoints**", "!findPoints " + x + " " + expr, true);
-        help.addField("**!findMinOrMax**", "!findMinOrMax " + a, true);
-        help.addField("**!findDomainRange**", "!findDomainRange " + a + " " + x, true);
+        help.addField("**/findAll**", "/findAll " + a + " " + b + " " + expr, true);
+        help.addField("**/findAnswer**", "/find " + expr, true);
+        help.addField("**/findX**", "/findX " + a + " " + b, true);
+        help.addField("**/findY**", "/findY " + x + " " + expr, true);
+        help.addField("**/findPoints**", "/findPoints " + x + " " + expr, true);
+        help.addField("**/findMinOrMax**", "/findMinOrMax " + a, true);
+        help.addField("**/findDomainRange**", "/findDomainRange " + a + " " + x, true);
 
         help.setFooter("Bot made by Ntdi", "https://i.imgur.com/VTc8AiA.jpeg");
         return help;
@@ -120,7 +120,7 @@ public class UtilCommands extends ListenerAdapter {
 
         help.addField("\n", "*Basic Math*", false);
 
-        help.addField("**!qalc**", "!qalc " + expr, false);
+        help.addField("**/qalc**", "!qalc " + expr, false);
         help.setAuthor("Qalc Tdi", "https://discord.gg/VU7kWC9Nda", "https://cdn.discordapp.com/avatars/959639967087345674/4fb685544e5f9ce5363336edcf5d5e74.png?size=256");
 
         help.addField("\n", "*Physic Equations*", false);
