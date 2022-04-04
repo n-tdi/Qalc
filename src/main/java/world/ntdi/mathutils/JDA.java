@@ -11,6 +11,7 @@ import net.dv8tion.jda.api.utils.cache.CacheFlag;
 import world.ntdi.mathutils.Commands.PhysicsCommands;
 import world.ntdi.mathutils.Commands.QuadraticCommands;
 import world.ntdi.mathutils.Commands.UtilCommands;
+import world.ntdi.mathutils.Listener.JoinListener;
 import world.ntdi.mathutils.Listener.ReadyListener;
 
 import javax.security.auth.login.LoginException;
@@ -23,6 +24,7 @@ public class JDA {
             .disableCache(CacheFlag.MEMBER_OVERRIDES, CacheFlag.VOICE_STATE)
             .setBulkDeleteSplittingEnabled(false)
             .addEventListeners(new ReadyListener())
+            .addEventListeners(new JoinListener())
             .addEventListeners(new QuadraticCommands())
             .addEventListeners(new UtilCommands())
             .addEventListeners(new PhysicsCommands())
