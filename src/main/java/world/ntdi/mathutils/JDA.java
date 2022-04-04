@@ -82,6 +82,12 @@ public class JDA {
                 Commands.slash("qalc", "Qalculate a given expression")
                         .addOptions(new OptionData(OptionType.STRING, "expression", "The expression").setRequired(true))
         );
+        
+        commands.addCommands(
+                Commands.slash("discriminant", "Get the discriminant given a, b, and c")
+                        .addOptions(new OptionData(OptionType.NUMBER, "a", "The a number").setRequired(true))
+                        .addOptions(new OptionData(OptionType.NUMBER, "b", "The b number").setRequired(true))
+                        .addOptions(new OptionData(OptionType.NUMBER, "c", "The c number").setRequired(true))
         gCommands.addCommands(
                 Commands.slash("findx", "Finds the x cord with a given a and b")
                         .addOptions(new OptionData(OptionType.NUMBER, "a", "The a cord").setRequired(true))
