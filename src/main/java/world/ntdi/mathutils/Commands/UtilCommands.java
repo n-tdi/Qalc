@@ -53,7 +53,7 @@ public class UtilCommands extends ListenerAdapter {
         help.setAuthor("Qalc Tdi", "https://discord.gg/VU7kWC9Nda", "https://cdn.discordapp.com/avatars/959639967087345674/4fb685544e5f9ce5363336edcf5d5e74.png?size=256");
         help.setDescription("Get all the **juicy** info of the quadratic commands here!");
 
-        help.addField("**!qalc**", "!qalc " + expr, false);
+        help.addField("**/qalc**", "!qalc " + expr, false);
 
         help.setFooter("Bot made by Ntdi", "https://i.imgur.com/VTc8AiA.jpeg");
         return help;
