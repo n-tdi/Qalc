@@ -50,5 +50,8 @@ public class JDA {
                 .build();
 
         jda.awaitReady();
+
+        CommandListUpdateAction commandListUpdateAction = jda.updateCommands();
+        commandListUpdateAction.queue();
     }
 }
