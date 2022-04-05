@@ -67,17 +67,17 @@ public class QuadraticMath {
         return MathApi.mathApiResult(expression);
     }
     
-    public static Double getDiscriminant(double a, double b, double c) throws IOException, ParseException {
+    public static String getDiscriminant(double a, double b, double c) throws IOException, ParseException {
         String expression = "(" + b + ")^2 - 4(" + a + ")(" + c + ")";
-        return Double.parseDouble(MathApi.mathApiResult(expression));
+        return MathApi.mathApiResult(expression);
     }
 
-    public static List<Double> quadForm(double a, double b, double c) throws IOException, ParseException {
+    public static List<String> quadForm(double a, double b, double c) throws IOException, ParseException {
         String expression1 = "(-" + b + " + sqrt(" + getDiscriminant(a, b, c) + ")) / 2(" + a + ")";
         String expression2 = "(-" + b + " - sqrt(" + getDiscriminant(a, b, c) + ")) / 2(" + a + ")";
-        List<Double> list = new ArrayList<Double>();
-        list.add(Double.parseDouble(MathApi.mathApiResult(expression1)));
-        list.add(Double.parseDouble(MathApi.mathApiResult(expression2)));
+        List<String> list = new ArrayList<String>();
+        list.add(MathApi.mathApiResult(expression1));
+        list.add(MathApi.mathApiResult(expression2));
         return list;
     }
 }

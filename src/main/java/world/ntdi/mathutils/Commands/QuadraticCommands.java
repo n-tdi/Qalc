@@ -71,35 +71,6 @@ public class QuadraticCommands extends ListenerAdapter {
             } catch (IOException | ParseException e) {
                 e.printStackTrace();
             }
-        } else if (event.getName().equals("qalc")) {
-            String expr = event.getOption("expression").getAsString();
-            try {
-                event.reply("The answer is: " + QuadraticMath.getAnswer(expr)).queue();
-            } catch (IOException | ParseException e) {
-                e.printStackTrace();
-            }
-        } else if (event.getName().equals("discriminant")) {
-            double a = event.getOption("a").getAsDouble();
-            double b = event.getOption("b").getAsDouble();
-            double c = event.getOption("c").getAsDouble();
-            try {
-                event.reply("The discriminant is: " + QuadraticMath.getDiscriminant(a, b, c)).queue();
-            } catch (IOException | ParseException e) {
-                e.printStackTrace();
-            }
-        } else if (event.getName().equals("quadform")) {
-            double a = event.getOption("a").getAsDouble();
-            double b = event.getOption("b").getAsDouble();
-            double c = event.getOption("c").getAsDouble();
-            try {
-                List<Double> quadFormAnswers = QuadraticMath.quadForm(a, b, c);
-                event.reply("Quadratic Formula Answer: \nx1 = " + quadFormAnswers.get(0) + "\nx2 = " + quadFormAnswers.get(1)).queue();
-            } catch (IOException | ParseException e) {
-                e.printStackTrace();
-            }
-        }
-        else {
-            event.reply("Unknown interaction").setEphemeral(true).queue();
         }
     }
 
