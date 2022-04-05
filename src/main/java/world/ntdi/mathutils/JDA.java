@@ -12,10 +12,7 @@ import net.dv8tion.jda.api.requests.restaction.CommandListUpdateAction;
 import net.dv8tion.jda.api.utils.cache.CacheFlag;
 import world.ntdi.mathutils.Commands.PhysicsCommands;
 import world.ntdi.mathutils.Commands.QuadraticCommands;
-import world.ntdi.mathutils.Commands.Slash.Discriminant;
-import world.ntdi.mathutils.Commands.Slash.FindAll;
-import world.ntdi.mathutils.Commands.Slash.Qalc;
-import world.ntdi.mathutils.Commands.Slash.QuadForm;
+import world.ntdi.mathutils.Commands.Slash.*;
 import world.ntdi.mathutils.Commands.UtilCommands;
 import world.ntdi.mathutils.Listener.JoinListener;
 import world.ntdi.mathutils.Listener.ReadyListener;
@@ -27,7 +24,7 @@ import java.util.Objects;
 public class JDA {
     public static void main(String[] args) throws LoginException, InterruptedException {
         CommandClientBuilder builder = new CommandClientBuilder();
-        builder.addSlashCommands(new QuadForm(), new Discriminant(), new Qalc(), new FindAll());
+        builder.addSlashCommands(new QuadForm(), new Discriminant(), new Qalc(), new FindAll(), new ExpoFunc());
         builder.forceGuildOnly(959638142896439307L);
         builder.setServerInvite("https://discord.gg/VU7kWC9Nda");
         builder.setOwnerId("811580599068262421");

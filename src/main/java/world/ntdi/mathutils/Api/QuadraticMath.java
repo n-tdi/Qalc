@@ -80,4 +80,43 @@ public class QuadraticMath {
         list.add(MathApi.mathApiResult(expression2));
         return list;
     }
+
+    public static List<String> exponentialFunction5Points(String expr) throws IOException, ParseException {
+        String expr1 = expr.replaceAll("x", "(" + (-2) + ")");
+        String expr2 = expr.replaceAll("x", "(" + (-1) + ")");
+        String expr3 = expr.replaceAll("x", "(" + 0 + ")");
+        String expr4 = expr.replaceAll("x", "(" + 1 + ")");
+        String expr5 = expr.replaceAll("x", "(" + 2 + ")");
+        String point1 = convertDecimalToFraction(Double.parseDouble(MathApi.mathApiResult(expr1)));
+        String point2 = convertDecimalToFraction(Double.parseDouble(MathApi.mathApiResult(expr2)));
+        String point3 = convertDecimalToFraction(Double.parseDouble(MathApi.mathApiResult(expr3)));
+        String point4 = convertDecimalToFraction(Double.parseDouble(MathApi.mathApiResult(expr4)));
+        String point5 = convertDecimalToFraction(Double.parseDouble(MathApi.mathApiResult(expr5)));
+        List<String> list = new ArrayList<String>();
+        list.add(point1);
+        list.add(point2);
+        list.add(point3);
+        list.add(point4);
+        list.add(point5);
+
+        return list;
+    }
+
+    public static String convertDecimalToFraction(double x){
+        if (x < 0){
+            return "-" + convertDecimalToFraction(-x);
+        }
+        double tolerance = 1.0E-6;
+        double h1=1; double h2=0;
+        double k1=0; double k2=1;
+        double b = x;
+        do {
+            double a = Math.floor(b);
+            double aux = h1; h1 = a*h1+h2; h2 = aux;
+            aux = k1; k1 = a*k1+k2; k2 = aux;
+            b = 1/(b-a);
+        } while (Math.abs(x-h1/k1) > x*tolerance);
+
+        return h1+"/"+k1;
+    }
 }
