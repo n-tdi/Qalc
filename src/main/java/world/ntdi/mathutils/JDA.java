@@ -29,7 +29,7 @@ public class JDA {
         builder.setActivity(Activity.watching("math"));
         CommandClient commandClient = builder.build();
 
-        Dotenv dotenv = Dotenv.configure().load();
+        Dotenv dotenv = Dotenv.configure().load(); 
         net.dv8tion.jda.api.JDA jda = JDABuilder.createDefault(dotenv.get("TOKEN"))
                 .disableCache(CacheFlag.MEMBER_OVERRIDES, CacheFlag.VOICE_STATE)
                 .setBulkDeleteSplittingEnabled(false)
