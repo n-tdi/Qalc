@@ -93,11 +93,11 @@ public class QuadraticMath {
         String point4 = convertDecimalToFraction(Double.parseDouble(MathApi.mathApiResult(expr4)));
         String point5 = convertDecimalToFraction(Double.parseDouble(MathApi.mathApiResult(expr5)));
         List<String> list = new ArrayList<String>();
-        list.add(point1);
-        list.add(point2);
-        list.add(point3);
-        list.add(point4);
-        list.add(point5);
+        list.add("-2, " + point1);
+        list.add("-1, " + point2);
+        list.add("0, " + point3);
+        list.add("1, " +  point4);
+        list.add("2, " + point5);
 
         return list;
     }
