@@ -53,7 +53,7 @@ public class UtilCommands extends ListenerAdapter {
         help.setAuthor("Qalc Tdi", "https://discord.gg/VU7kWC9Nda", "https://cdn.discordapp.com/avatars/959639967087345674/4fb685544e5f9ce5363336edcf5d5e74.png?size=256");
         help.setDescription("Get all the **juicy** info of the quadratic commands here!");
 
-        help.addField("**/qalc**", "!qalc " + expr, false);
+        help.addField("**/qalc**", "/qalc " + expr, false);
 
         help.setFooter("Bot made by Ntdi", "https://i.imgur.com/VTc8AiA.jpeg");
         return help;
@@ -95,11 +95,11 @@ public class UtilCommands extends ListenerAdapter {
         String work = " [work](https://i.ytimg.com/vi/i7tmmv84N7c/maxresdefault.jpg)";
         String time = " [time](https://cdn.mos.cms.futurecdn.net/9meMCxtJU3NWkh5YcPs7qG-1200-80.jpg)";
 
-        help.addField("**!force**", "!force" + mass + acel, true);
-        help.addField("**!work**", "!work" + force + dist + " |" + mass + acel + dist, true);
-        help.addField("**!power**", "!power " + work + time + " |" + force + dist + time + " |" + mass + acel + dist + time, true);
-        help.addField("**!ke**", "!ke " + mass + " " + vloc, true);
-        help.addField("**!gpe**", "!gpe " + height + " " + mass + " " + vloc, true);
+        help.addField("**/force**", "/force" + mass + acel, true);
+        help.addField("**/work**", "/work" + force + dist + " |" + mass + acel + dist, true);
+        help.addField("**/power**", "/power " + work + time + " |" + force + dist + time + " |" + mass + acel + dist + time, true);
+        help.addField("**/ke**", "/ke " + mass + " " + vloc, true);
+        help.addField("**/gpe**", "/gpe " + height + " " + mass + " " + vloc, true);
 
         help.setFooter("Bot made by Ntdi", "https://i.imgur.com/VTc8AiA.jpeg");
         return help;

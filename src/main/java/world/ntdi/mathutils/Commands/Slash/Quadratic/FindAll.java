@@ -1,4 +1,4 @@
-package world.ntdi.mathutils.Commands.Slash;
+package world.ntdi.mathutils.Commands.Slash.Quadratic;
 
 import com.jagrosh.jdautilities.command.SlashCommand;
 import com.jagrosh.jdautilities.command.SlashCommandEvent;
