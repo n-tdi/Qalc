@@ -8,6 +8,8 @@ import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.requests.restaction.CommandListUpdateAction;
 import net.dv8tion.jda.api.utils.cache.CacheFlag;
 import world.ntdi.mathutils.Commands.PhysicsCommands;
+import world.ntdi.mathutils.Commands.Slash.Basic.DecimalToFraction;
+import world.ntdi.mathutils.Commands.Slash.Basic.Simplify;
 import world.ntdi.mathutils.Commands.Slash.Physics.*;
 import world.ntdi.mathutils.Commands.Slash.Quadratic.*;
 import world.ntdi.mathutils.Commands.UtilCommands;
@@ -20,7 +22,7 @@ import javax.security.auth.login.LoginException;
 public class JDA {
     public static void main(String[] args) throws LoginException, InterruptedException {
         CommandClientBuilder builder = new CommandClientBuilder();
-        builder.addSlashCommands(new QuadForm(), new Discriminant(), new Qalc(), new FindAll(), new ExpoFunc(), new Force(), new Work(), new Power(), new KE(), new GPE());
+        builder.addSlashCommands(new QuadForm(), new Discriminant(), new Qalc(), new FindAll(), new ExpoFunc(), new Force(), new Work(), new Power(), new KE(), new GPE(), new Simplify(), new DecimalToFraction());
         builder.forceGuildOnly(959638142896439307L);
         builder.setServerInvite("https://discord.gg/VU7kWC9Nda");
         builder.setOwnerId("811580599068262421");

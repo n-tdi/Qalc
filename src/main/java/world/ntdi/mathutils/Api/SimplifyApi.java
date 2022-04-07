@@ -13,9 +13,9 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
 
-public class MathApi {
-    public static String mathApiResult(String expression) throws IOException, ParseException {
-        String json = "{\"eval\":\"" + expression + "\"}";
+public class SimplifyApi {
+    public static String simpApiResult(String expression) throws IOException, ParseException {
+        String json = "{\"simp\":\"" + expression + "\"}";
         HttpURLConnection http = mathApiPost(json);
         BufferedReader br = new BufferedReader(new InputStreamReader(http.getInputStream()));
         StringBuilder sb = new StringBuilder();
@@ -32,7 +32,7 @@ public class MathApi {
     }
 
     public static HttpURLConnection mathApiPost(String json) throws IOException, ParseException {
-        URL url = new URL("http://localhost:3000/api/eval"); // https://github.com/professional-tdi/Math-Api
+        URL url = new URL("http://localhost:3000/api/simp"); // https://github.com/professional-tdi/Math-Api
         URLConnection con = url.openConnection();
         HttpURLConnection http = (HttpURLConnection)con;
         http.setRequestMethod("POST"); // PUT is another valid option
