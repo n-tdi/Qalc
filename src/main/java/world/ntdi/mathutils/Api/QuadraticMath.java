@@ -117,6 +117,6 @@ public class QuadraticMath {
             b = 1/(b-a);
         } while (Math.abs(x-h1/k1) > x*tolerance);
 
-        return h1+"/"+k1;
+        return ((int) h1)+"/"+ ((int) k1);
     }
 }
