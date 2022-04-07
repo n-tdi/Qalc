@@ -102,6 +102,22 @@ public class QuadraticMath {
         return list;
     }
 
+    public static String expoGrowth(double a, double p, double t) throws IOException, ParseException {
+        String expr = "(" + a + ")(1 + " + MathApi.mathApiResult(p + "/100") + ")^(" + t + ")";
+        return MathApi.mathApiResult(expr);
+    }
+
+    public static String expoDecrease(double a, double p, double t) throws IOException, ParseException {
+        String expr = "(" + a + ")(1 - " + MathApi.mathApiResult(p + "/100") + ")^(" + t + ")";
+        return MathApi.mathApiResult(expr);
+    }
+
+    public static String expoCompound(double a, double p, double n, double t) throws IOException, ParseException {
+        String percent = MathApi.mathApiResult(p + "/100");
+        String expr = "(" + a + ")(1 + " + MathApi.mathApiResult(percent + "/" + n) + ")^(" + MathApi.mathApiResult(n + "*" + t) + ")";
+        return MathApi.mathApiResult(expr);
+    }
+
     public static String convertDecimalToFraction(double x){
         if (x < 0){
             return "-" + convertDecimalToFraction(-x);

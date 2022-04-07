@@ -22,7 +22,9 @@ import javax.security.auth.login.LoginException;
 public class JDA {
     public static void main(String[] args) throws LoginException, InterruptedException {
         CommandClientBuilder builder = new CommandClientBuilder();
-        builder.addSlashCommands(new QuadForm(), new Discriminant(), new Qalc(), new FindAll(), new ExpoFunc(), new Force(), new Work(), new Power(), new KE(), new GPE(), new Simplify(), new DecimalToFraction());
+        builder.addSlashCommands(new QuadForm(), new Discriminant(), new Qalc(), new FindAll(), new ExpoFunc(), new Exponential(),
+                new Force(), new Work(), new Power(), new KE(), new GPE(),
+                new Simplify(), new DecimalToFraction());
         builder.forceGuildOnly(959638142896439307L);
         builder.setServerInvite("https://discord.gg/VU7kWC9Nda");
         builder.setOwnerId("811580599068262421");
