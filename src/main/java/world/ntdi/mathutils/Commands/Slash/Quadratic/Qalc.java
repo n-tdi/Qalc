@@ -7,6 +7,7 @@ import net.dv8tion.jda.api.interactions.commands.OptionType;
 import net.dv8tion.jda.api.interactions.commands.build.OptionData;
 import org.json.simple.parser.ParseException;
 import world.ntdi.mathutils.Api.QuadraticMath;
+import world.ntdi.mathutils.Api.ValidApi;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -29,7 +30,12 @@ public class Qalc extends SlashCommand {
         OptionMapping exprOpt = event.getOption("expression");
         String expr = exprOpt.getAsString();
         try {
-            event.reply("The answer is: " + QuadraticMath.qalc(expr)).queue();
+            ArrayList<String> result = ValidApi.checkIfValid(expr);
+            if (result.get(0).equalsIgnoreCase("valid")) {
+                event.reply("The answer is: " + QuadraticMath.qalc(expr)).queue();
+            } else {
+                event.reply(result.get(1)).queue();
+            }
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }

@@ -6,6 +6,8 @@ import net.dv8tion.jda.api.interactions.commands.OptionType;
 import net.dv8tion.jda.api.interactions.commands.build.OptionData;
 import org.json.simple.parser.ParseException;
 import world.ntdi.mathutils.Api.BasicMath;
+import world.ntdi.mathutils.Api.QuadraticMath;
+import world.ntdi.mathutils.Api.ValidApi;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -26,7 +28,12 @@ public class Simplify extends SlashCommand {
         String expr = event.getOption("expression").getAsString();
 
         try {
-            event.reply("Simplified expression: " + BasicMath.simplfy(expr)).queue();
+            ArrayList<String> result = ValidApi.checkIfValid(expr);
+            if (result.get(0).equalsIgnoreCase("valid")) {
+                event.reply("Simplified expression: " + BasicMath.simplfy(expr)).queue();
+            } else {
+                event.reply(result.get(1)).queue();
+            }
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }

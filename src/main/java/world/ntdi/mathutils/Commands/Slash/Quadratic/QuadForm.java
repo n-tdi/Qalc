@@ -38,6 +38,7 @@ public class QuadForm extends SlashCommand {
         double c = cOpt.getAsDouble();
         try {
             List<String> quadFormAnswers = QuadraticMath.quadForm(a, b, c);
+
             event.reply("Quadratic Formula Answer: \nx1 = " + quadFormAnswers.get(0) + "\nx2 = " + quadFormAnswers.get(1)).queue();
         } catch (IOException | ParseException e) {
             e.printStackTrace();

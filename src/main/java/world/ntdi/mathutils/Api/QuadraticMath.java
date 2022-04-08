@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class QuadraticMath {
-    public static double qalc(String expr) throws IOException, ParseException {
-        return Double.parseDouble(MathApi.mathApiResult(expr));
+    public static String qalc(String expr) throws IOException, ParseException {
+        return MathApi.mathApiResult(expr);
     }
 
     public static double getX(double a, double b) throws IOException, ParseException {

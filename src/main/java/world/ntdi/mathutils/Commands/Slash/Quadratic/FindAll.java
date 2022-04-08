@@ -7,6 +7,7 @@ import net.dv8tion.jda.api.interactions.commands.OptionType;
 import net.dv8tion.jda.api.interactions.commands.build.OptionData;
 import org.json.simple.parser.ParseException;
 import world.ntdi.mathutils.Api.QuadraticMath;
+import world.ntdi.mathutils.Api.ValidApi;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -38,23 +39,28 @@ public class FindAll extends SlashCommand {
         double c = cOpt.getAsDouble();
         String expr = exprOpt.getAsString();
         try {
-            List<String> xs = QuadraticMath.quadForm(a, b, c);
-            double x1 = Double.parseDouble(xs.get(0));
-            double x2 = Double.parseDouble(xs.get(1));
-            StringBuilder sb = new StringBuilder();
-            sb.append("Here is all the info you'll Need:\n")
-                    .append("**x1:**").append("\n")
-                    .append("  - ").append("y = ").append(QuadraticMath.getY(x1, expr)).append("\n")
-                    .append("  - ").append("Points: \n").append(QuadraticMath.getPoints5(x1, expr))
-                    .append("  - ").append("Domain and range: ").append("\n").append(QuadraticMath.getDomainAndRange(a, x1)).append("\n")
-                    .append("  - ").append("Point type: ").append(QuadraticMath.minOrMax(a)).append("\n")
-                    .append("**x2:**").append("\n")
-                    .append("  - ").append("y = ").append(QuadraticMath.getY(x2, expr)).append("\n")
-                    .append("  - ").append("Points: \n").append(QuadraticMath.getPoints5(x2, expr))
-                    .append("  - ").append("Domain and range: ").append(QuadraticMath.getDomainAndRange(a, x2)).append("\n")
-                    .append("  - ").append("Point type: ").append(QuadraticMath.minOrMax(a));
+            ArrayList<String> result = ValidApi.checkIfValid(expr);
+            if (result.get(0).equalsIgnoreCase("valid")) {
+                List<String> xs = QuadraticMath.quadForm(a, b, c);
+                double x1 = Double.parseDouble(xs.get(0));
+                double x2 = Double.parseDouble(xs.get(1));
+                StringBuilder sb = new StringBuilder();
+                sb.append("Here is all the info you'll Need:\n")
+                        .append("**x1:**").append("\n")
+                        .append("  - ").append("y = ").append(QuadraticMath.getY(x1, expr)).append("\n")
+                        .append("  - ").append("Points: \n").append(QuadraticMath.getPoints5(x1, expr))
+                        .append("  - ").append("Domain and range: ").append("\n").append(QuadraticMath.getDomainAndRange(a, x1)).append("\n")
+                        .append("  - ").append("Point type: ").append(QuadraticMath.minOrMax(a)).append("\n")
+                        .append("**x2:**").append("\n")
+                        .append("  - ").append("y = ").append(QuadraticMath.getY(x2, expr)).append("\n")
+                        .append("  - ").append("Points: \n").append(QuadraticMath.getPoints5(x2, expr))
+                        .append("  - ").append("Domain and range: ").append(QuadraticMath.getDomainAndRange(a, x2)).append("\n")
+                        .append("  - ").append("Point type: ").append(QuadraticMath.minOrMax(a));
 
-            event.reply(sb.toString()).queue();
+                event.reply(sb.toString()).queue();
+            } else {
+                event.reply(result.get(1)).queue();
+            }
 
         } catch (IOException | ParseException e) {
             e.printStackTrace();

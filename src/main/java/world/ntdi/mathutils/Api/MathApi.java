@@ -14,9 +14,14 @@ import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
 
 public class MathApi {
+
     public static String mathApiResult(String expression) throws IOException, ParseException {
         String json = "{\"eval\":\"" + expression + "\"}";
         HttpURLConnection http = mathApiPost(json);
+        int responseCode = http.getResponseCode();
+//        if (responseCode != 200) {
+//            return "Error: " + responseCode;
+//        }
         BufferedReader br = new BufferedReader(new InputStreamReader(http.getInputStream()));
         StringBuilder sb = new StringBuilder();
         String output;
