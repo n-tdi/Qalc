@@ -118,6 +118,11 @@ public class QuadraticMath {
         return MathApi.mathApiResult(expr);
     }
 
+    public static String predictFuture(double a, double r, double n) throws IOException, ParseException {
+        String expr = "(" + a + ")(r^(" + n  + "-1))";
+        return MathApi.mathApiResult(expr);
+    }
+
     public static String convertDecimalToFraction(double x){
         if (x < 0){
             return "-" + convertDecimalToFraction(-x);
